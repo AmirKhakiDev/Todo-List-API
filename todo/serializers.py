@@ -9,14 +9,6 @@ class ToDoSerializer(serializers.ModelSerializer):
         model = Task
         fields = '__all__'
 
-    def validate(self, attrs):
-        print(attrs)
-        return super().validate(attrs)
-
-    def create(self, validated_data):
-        print(validated_data)
-        return super().create(validated_data)
-    
     def get_email(self, obj):
         return obj.email.email
     

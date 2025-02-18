@@ -11,7 +11,6 @@ class IsAuthenticatedAndOwner(permissions.BasePermission):
         raise NotAuthenticated("you have to login.")
 
     def has_object_permission(self, request, view, obj):
-        print(request.user.email , obj.email)
         if request.user == obj.email:
             return True
 
