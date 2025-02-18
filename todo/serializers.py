@@ -19,3 +19,4 @@ class ToDoSerializer(serializers.ModelSerializer):
     
     def get_email(self, obj):
         return obj.email.email
+    

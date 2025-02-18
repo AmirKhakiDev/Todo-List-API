@@ -2,7 +2,7 @@ from rest_framework import permissions
 from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 
 
-class IsAuthenticatedAndOwner(permissions.BasePermission):
+class IsAuthenticatedAndOwnerUser(permissions.BasePermission):
     
     def has_permission(self, request, view):
         if request.user.is_authenticated:
@@ -12,7 +12,7 @@ class IsAuthenticatedAndOwner(permissions.BasePermission):
 
     def has_object_permission(self, request, view, obj):
         print(request.user.email , obj.email)
-        if request.user == obj.email:
+        if request.user.email == obj.email:
             return True
 
         raise PermissionDenied("you don't have access to this page!!!")

@@ -1,11 +1,10 @@
 from rest_framework.routers import DefaultRouter
 from django.urls import *
-from .views import ListTasks, CreateTask
+from .views import TaskListCreateView, TaskRetrieveUpdateDeleteView
 
 
 
 urlpatterns = [
-    path('tasks/', ListTasks.as_view(), name="task"),
-    path('task/create/', CreateTask.as_view(), name='create'),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('', TaskListCreateView.as_view(), name="task"),
+    path('<str:title>/',TaskRetrieveUpdateDeleteView.as_view(), name='option'),
 ]
