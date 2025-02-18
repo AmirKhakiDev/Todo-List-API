@@ -48,7 +48,7 @@ A simple and efficient RESTful API for managing to-do tasks. This API allows use
 
 ## Example Usage
 ```sh
-curl -X POST "http://localhost:3000/tasks" -H "Content-Type: application/json" -d '{"title": "Buy groceries", "completed": false}'
+curl -X POST "http://localhost:3000/tasks" -H "Content-Type: application/json" -d '{"title": "Python", "description": 'perfect language.'}'
 ```
 
 ## Contributing
