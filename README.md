@@ -24,7 +24,7 @@ A simple and efficient RESTful API for managing to-do tasks. This API allows use
    ```
    or
    ```sh
-   pip install -r requirements.txt  # If using Python
+   pip install -r requirements.txt 
    ```
 4. Apply database migrations (for Django):
    ```sh

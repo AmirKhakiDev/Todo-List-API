@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from .permission import IsAuthenticatedAndOwnerUser
 from .serializers import UserSerializer
 
-class UserMnagement(ModelViewSet):
+class UserManagement(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticatedAndOwnerUser]
