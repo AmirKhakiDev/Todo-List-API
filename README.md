@@ -22,7 +22,6 @@ A simple and efficient RESTful API for managing to-do tasks. This API allows use
    ```sh
    cd To-Do-API
    ```
-   or
    ```sh
    pip install -r requirements.txt 
    ```
